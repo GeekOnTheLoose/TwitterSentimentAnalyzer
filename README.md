@@ -34,3 +34,8 @@ pip install textblob
 
 This package will be used for the sentiment analysis.
 
+Note: If your're using Anaconda distribution then refer the links below to install:
+
+textblob: https://anaconda.org/conda-forge/textblob
+
+tweepy: https://anaconda.org/conda-forge/tweepy
