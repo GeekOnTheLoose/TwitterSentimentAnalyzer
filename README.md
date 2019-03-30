@@ -27,8 +27,10 @@ Now after creating the app we can start coding.
 We need to install two packages:
 
 pip install tweepy
+
 This package will be used for handling the Twitter API.
 
 pip install textblob
+
 This package will be used for the sentiment analysis.
 
