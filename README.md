@@ -9,10 +9,10 @@ Sentiment analysis can be performed in many different ways. Many brands and mark
 
 Automated sentiment tagging is usually achieved through word lists. For example, mentions of ‘hate’, 'crime' would be tagged negatively.
 
-There can be **two** approaches to sentiment analysis.
+There can be **two approaches** to sentiment analysis.
 
-**1. Lexicon-based methods
-2. Machine Learning-based methods.**
+**1. Lexicon-based methods**
+**2. Machine Learning-based methods.**
 
 **In this problem, we will be using a Lexicon-based method**
 
