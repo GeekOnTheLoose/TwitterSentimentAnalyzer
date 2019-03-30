@@ -12,6 +12,7 @@ Automated sentiment tagging is usually achieved through word lists. For example,
 There can be **two approaches** to sentiment analysis.
 
 **1. Lexicon-based methods**
+
 **2. Machine Learning-based methods.**
 
 **In this problem, we will be using a Lexicon-based method**
