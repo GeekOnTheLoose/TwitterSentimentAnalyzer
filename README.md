@@ -42,3 +42,73 @@ This package will be used for the sentiment analysis.**
 **textblob: https://anaconda.org/conda-forge/textblob**
 
 **tweepy: https://anaconda.org/conda-forge/tweepy**
+
+We need to declare the variables to store the various keys associated with the **Twitter API**.
+
+consumer_key = ‘[enter consumer_key]’
+
+consumer_key_secret = ‘[enter consumer_key_secret]’
+
+access_token = ‘[enter access_token]’
+
+access_token_secret = ‘[enter access_token_secret]’
+
+The next step is to create a connection with the Twitter API using tweepy with these tokens.
+
+**Tweepy**
+
+Tweepy supports **OAuth authentication**. Authentication is handled by the **tweepy.OAuthHandler class**.
+
+An OAuthHandler instance must be created by passing a consumer token and secret.
+
+On this auth instance, we will call a function **set_access_token** by passing the **access_token** and **access_token_secret**.
+
+Finally, we create our tweepy API instance by passing this auth instance into the API function of tweepy.
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_key_secret)
+
+auth.set_access_token(access_token, access_token_secret)
+
+api = tweepy.API(auth)
+
+We can now search Twitter for any topic using the **search** method of the API.
+
+public_tweets = api.search(‘Avengers Endgame’)
+
+Now we will be getting all the tweets related to the topic ‘Avengers Endgame’. We can perform sentiment analysis using the library textblob.
+
+**TextBlob**
+
+TextBlob is a Python (2 and 3) library for processing textual data. It provides a simple API for diving into common natural language processing (NLP) tasks such as part-of-speech tagging, noun phrase extraction, sentiment analysis, classification, translation, and more.
+
+A textblob can be created in the following way (example, and not part of the original code):
+
+example = TextBlob("Python is a high-level, general-purpose programming language.")
+
+And tokenization can be performed by the following methods:
+
+1) words: returns the words of text
+
+usage:
+
+example.words
+
+2) sentences: returns the sentences of text
+
+usage:
+
+example.sentences
+
+**Part-of-speech Tagging**
+
+Part-of-speech tags can be accessed through the tags property.
+
+wiki.tags
+
+[('Python', 'NNP'), ('is', 'VBZ'), ('a', 'DT'), ('high-level', 'JJ'), ('general-purpose', 'JJ'), ('programming', 'NN'), ('language', 'NN')]
+
+
+
+**Sentiment Analysis**
+
+The sentiment property returns a named tuple of the form Sentiment (polarity, subjectivity). The polarity score is a float within the range [-1.0, 1.0]. The subjectivity is a float within the range [0.0, 1.0] where 0.0 is very objective and 1.0 is very subjective.
